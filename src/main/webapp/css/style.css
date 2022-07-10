@@ -1,0 +1,172 @@
+Body {
+  font-family: Calibri, Helvetica, sans-serif;
+  background-color: rgb(243 242 234);
+}
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+/*------------------------------------------ Medios de Pago ------------------------------------------ */
+/* Container for flexboxes */
+.row {
+  display: -webkit-flex;
+  display: flex;
+}
+
+/* Create three equal columns that sits next to each other */
+.medioPago {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 10px;
+  height: 50px;
+  text-align: center;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 50px) {
+  .row {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+/*------------------------------------------ RESPONSIVE CSS ------------------------------------------ */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+
+/* FOOTER */
+
+footer {
+  margin-top: 20px;
+  background-color: black;
+  color: #5c5c60;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-areas: "copyright redesSociales";
+  border-radius: 20px;
+  padding: 10px;
+}
+
+#redesSociales {
+  justify-self: right;
+  grid-area: redesSociales;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+}
+
+#redesSociales__titular {
+  font-size: 18px;
+  margin: 0px;
+  text-align: right;
+}
+
+#foto-facebook,
+#foto-instagram {
+  width: 27px;
+  height: 27px;
+  margin-left: 5px;
+}
+
+div #infoEmpresa,
+div #copyright {
+  margin: 0px;
+}
+
+#infoEmpresa {
+  font-style: italic;
+}
+
+#copyright {
+  font-weight: bold;
+  grid-area: copyright;
+  align-self: end;
+  margin-left: 5px;
+}
+.buy-link {
+  white-space: nowrap;
+}
+/*--------- snackbar --------*/
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  /* background-color: #333;  */
+  background-color: green; /* Black background color */
+
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 90%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
