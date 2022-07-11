@@ -1,2 +1,5 @@
 # Ignora base de datos
 basedatos.db
+
+# Ignora carpeta 
+.dbeaver
