@@ -1,8 +1,7 @@
-package controladores;
+package Controladores;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -15,17 +14,17 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 /**
- * Servlet implementation class Login
+ * Servlet implementation class login
  */
-@WebServlet("/login")
-public class Login extends HttpServlet {
+public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+       
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String uname = request.getParameter("username");
+		String uname = request.getParameter("user");
 		String upwd = request.getParameter("password");
 		HttpSession session = request.getSession();
 		RequestDispatcher disp = null;
@@ -33,15 +32,15 @@ public class Login extends HttpServlet {
 		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/comision_22030?useSSL=false", "root", "12345678");
-			final String QUERY = "select * from users where name = ? and pass = ?";
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/eCommerce?useSSL=false", "root", "admin");
+			final String QUERY = "select * from login where user = ? and password = ?";
 			PreparedStatement ps = con.prepareStatement(QUERY);
 			ps.setString(1, uname);
 			ps.setString(2, upwd);
 			ResultSet rs = ps.executeQuery();
 			
 			if (rs.next()) {
-				session.setAttribute("name", rs.getString(1));
+				session.setAttribute("user", rs.getString(1));
 				disp = request.getRequestDispatcher("index.jsp");
 			} else {
 				request.setAttribute("status", "failed");
@@ -52,5 +51,4 @@ public class Login extends HttpServlet {
 			e.printStackTrace();
 		}
 	}
-
 }

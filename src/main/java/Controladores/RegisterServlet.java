@@ -1,4 +1,4 @@
-package controladores;
+package Controladores;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -7,41 +7,36 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 /**
- * Servlet implementation class Registration
+ * Servlet implementation class RegisterServlet
  */
+
 @WebServlet("/register")
-public class Registration extends HttpServlet {
+public class RegisterServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String uname = request.getParameter("name");
-		String uemail = request.getParameter("email");
-		String upwd = request.getParameter("pass");
-		String umobile = request.getParameter("contact");
+		String uname = request.getParameter("user");
+		String upwd = request.getParameter("password");
 		RequestDispatcher disp = null;
 		Connection con = null;
 
 		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/comision_22030?useSSL=false", "root", "12345678");
-			final String STATEMENT = "insert into users (name, email, pass, phone) values (?,?,?,?)";
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/eCommerce?useSSL=false", "root", "admin");
+			final String STATEMENT = "insert into login (user, password) values (?,?,?,?)";
 			PreparedStatement pst = con.prepareStatement(STATEMENT);
 			pst.setString(1, uname);
-			pst.setString(2, uemail);
 			pst.setString(3, upwd);
-			pst.setString(4, umobile);
+			
 			
 			int rowCount = pst.executeUpdate();
 			disp = request.getRequestDispatcher("login.jsp");
@@ -62,7 +57,6 @@ public class Registration extends HttpServlet {
 				e.printStackTrace();
 			}
 		}
-		
 	}
 
 }

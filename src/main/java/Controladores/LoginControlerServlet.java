@@ -1,4 +1,4 @@
-package controladores;
+package Controladores;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -8,18 +8,17 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- *  Esto es una Annotation en Java
- * Servlet implementation class HomeServlet
+ * Servlet implementation class LoginControlerServlet
  */
-@WebServlet("/Logins")
-public class LoginController extends HttpServlet {
+
+@WebServlet("/Login")
+public class LoginControlerServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
-     * Overwriting super controller
      */
-    public LoginController() {
+    public LoginControlerServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
