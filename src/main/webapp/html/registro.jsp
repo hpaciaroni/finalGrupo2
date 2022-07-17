@@ -31,7 +31,7 @@
                                             <i class="bi bi-envelope-fill"></i>
                                         </div>
                                     </div>
-                                    <input type="text" class="form-control" id="email" placeholder="Email" name="email" required>
+                                    <input type="email" class="form-control" id="email" placeholder="Email" name="email" required>
                                     <p class="text-danger mb-2 d-none" id="alertEmail"></p>
                                 </div>
                                 <div class="input-group mb-2 mr-sm-2">

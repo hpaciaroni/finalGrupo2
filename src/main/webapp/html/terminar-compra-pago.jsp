@@ -19,7 +19,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="../../css/terminar-compra.css" />
+    <link rel="stylesheet" href="../css/terminar-compra.css" />
   </head>
  <body>
  	<jsp:include page="partials/nav.jsp"></jsp:include>
@@ -108,6 +108,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" 
 integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
 
-    <script src="../../js/terminar-compra.js"></script>
+    <script src="../js/terminar-compra.js"></script>
 </body>
 </html>

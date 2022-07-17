@@ -32,7 +32,7 @@ public class LoginServlet extends HttpServlet {
 		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/eCommerce?useSSL=false", "root", "admin");
+			Connection con = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\Usuario\\eclipse-workspace\\IntegradorGrupo2\\basedatos.db?useSSL=false", "root", "admin");
 			final String QUERY = "select * from login where user = ? and password = ?";
 			PreparedStatement ps = con.prepareStatement(QUERY);
 			ps.setString(1, uname);
