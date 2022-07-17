@@ -23,7 +23,7 @@
   </head>
  <body>
  	<jsp:include page="partials/nav.jsp"></jsp:include>
- 
+ prueba
 
     <main>
       <div class="row">
