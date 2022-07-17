@@ -127,25 +127,7 @@
 
     <br />
 
-    <footer>
-      <div>
-        <p id="infoEmpresa">Nombre de la empresa - Dirección</p>
-        <p id="copyright">Copyright © Todos los derechos reservados - 2022</p>
-      </div>
-
-      <div id="redesSociales">
-        <span id="redesSociales__titular">Redes sociales</span>
-        <a href="https://www.facebook.com" target="_blank"
-          ><img id="foto-facebook" src="../images/facebook.jpg" alt="facebook"
-        /></a>
-        <a href="https://www.instagram.com" target="_blank"
-          ><img
-            id="foto-instagram"
-            src="../images/instagram.png"
-            alt="instagram"
-        /></a>
-      </div>
-    </footer>
+	<jsp:include page="partials/footer.jsp"></jsp:include>
 
     <!-- Bootstrap JS -->
     <script src="../js/index.js"></script>

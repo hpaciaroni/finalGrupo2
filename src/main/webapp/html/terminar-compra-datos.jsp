@@ -91,6 +91,7 @@
         </div>
       </div>
     </main>
+    	<jsp:include page="partials/footer.jsp"></jsp:include>
     <script src="../../js/index.js"></script>
   </body>
 </html>

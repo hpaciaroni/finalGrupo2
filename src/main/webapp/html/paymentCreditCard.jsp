@@ -174,9 +174,7 @@
     </div>
     <br>
     <br>
-    <footer>
-
-    </footer>
+	<jsp:include page="partials/footer.jsp"></jsp:include>
     
     <script src="/js/paymentCreditCard.js" ></script>
      <!-- Bootstrap JS -->

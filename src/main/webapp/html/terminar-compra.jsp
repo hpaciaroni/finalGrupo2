@@ -126,6 +126,7 @@
         </div>
       </div>
     </main>
+    	<jsp:include page="partials/footer.jsp"></jsp:include>
     <script src="../js/carrito.js"></script>
   </body>
 </html>
