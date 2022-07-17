@@ -5,7 +5,7 @@
 <jsp:include page="partials/head.jsp"></jsp:include>
  <body>
  	<jsp:include page="partials/nav.jsp"></jsp:include>
- 
+
 
     <main>
   

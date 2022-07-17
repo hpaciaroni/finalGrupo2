@@ -20,6 +20,8 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
     />
     <link rel="stylesheet" href="../css/terminar-compra.css" />
+         <link rel="stylesheet" href="../css/footer.css" />
+    
   </head>
  <body>
  	<jsp:include page="partials/nav.jsp"></jsp:include>

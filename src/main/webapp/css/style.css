@@ -69,59 +69,7 @@ Body {
   }
 }
 
-/* FOOTER */
 
-footer {
-  margin-top: 20px;
-  background-color: black;
-  color: #5c5c60;
-  width: 100%;
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-areas: "copyright redesSociales";
-  border-radius: 20px;
-  padding: 10px;
-}
-
-#redesSociales {
-  justify-self: right;
-  grid-area: redesSociales;
-  margin-right: 5px;
-  display: flex;
-  align-items: center;
-}
-
-#redesSociales__titular {
-  font-size: 18px;
-  margin: 0px;
-  text-align: right;
-}
-
-#foto-facebook,
-#foto-instagram {
-  width: 27px;
-  height: 27px;
-  margin-left: 5px;
-}
-
-div #infoEmpresa,
-div #copyright {
-  margin: 0px;
-}
-
-#infoEmpresa {
-  font-style: italic;
-}
-
-#copyright {
-  font-weight: bold;
-  grid-area: copyright;
-  align-self: end;
-  margin-left: 5px;
-}
-.buy-link {
-  white-space: nowrap;
-}
 /*--------- snackbar --------*/
 /* The snackbar - position it at the bottom and in the middle of the screen */
 #snackbar {

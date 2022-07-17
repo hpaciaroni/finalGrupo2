@@ -18,31 +18,31 @@
                   <div class="navbar-nav">
                     <a href="products.jsp" class="nav-item nav-link">Productos</a>
                     <a href="#" class="nav-item nav-link buy-link">Mis compras</a>
+                    
                     <div class="nav-item dropdown">
-                      <a
-                        href="#"
+                      <a                
                         class="nav-link dropdown-toggle"
                         data-bs-toggle="dropdown"
-                        >Ingrese</a
-                      >
+                        >Ingrese</a>
                       <div class="dropdown-menu">
                         <a href="login.jsp" class="dropdown-item">Iniciar sesión</a>
                         <a href="infouser.jsp" class="dropdown-item">Perfil</a>
                         <a href="registro.jsp" class="dropdown-item">Registrarse</a>
                       </div>
                     </div>
-                  </div>              
-                >
-                <button type="submit" class="btn btn-dark">
-                  <a
-                    href="terminar-compra.jsp"
+                  </div>            
+                              
+                <button type="button" class="btn btn-dark">
+                  
+                  <a  href="terminar-compra.jsp"
                     class="nav-item nav-link"
-                  >
+                    >
+                     
                     <span class="bi-basket"></span>
                     <span class="badge badge-light"></span>
-
-                  </a>
+                 </a>
                 </button>
+
               </div>
             </div>
           </div>
